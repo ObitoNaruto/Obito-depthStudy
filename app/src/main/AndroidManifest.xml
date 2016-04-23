@@ -4,7 +4,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/faily_tail"
         android:label="@string/app_name"
         android:theme="@style/ObitoAppTheme">
         <activity
@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Android群英传 -->
+        <activity android:name=".androidheroes.systemwidget.ui.activity.SystemWidgetActivity"></activity>
+        <activity android:name=".androidheroes.systemwidget.ui.activity.MyViewTest"></activity>
+        <activity android:name=".androidheroes.systemwidget.ui.activity.TopBarTest"></activity>
     </application>
 
 </manifest>

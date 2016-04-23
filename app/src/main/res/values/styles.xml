@@ -25,4 +25,33 @@
         <item name="android:textSize">12sp</item>
     </style>
 
+    <style name="TvButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_orange_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <attr name="title" format="string" />
+    <attr name="titleTextColor" format="color" />
+    <declare-styleable name="TopBar">
+        <attr name="title" />
+        <attr name="titleTextSize" format="dimension" />
+        <attr name="titleTextColor"/>
+
+        <attr name="leftTextColor" format="color" />
+        <attr name="leftBackground" format="reference|color" />
+        <attr name="leftText" format="string" />
+
+        <attr name="rightTextColor" format="color" />
+        <attr name="rightBackground" format="reference|color" />
+        <attr name="rightText" format="string" />
+    </declare-styleable>
+
 </resources>

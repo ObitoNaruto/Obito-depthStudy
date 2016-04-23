@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.android.mobile.obito.R;
+import com.android.mobile.obito.androidheroes.systemwidget.ui.fragment.HeroesHomeFragment;
 import com.android.mobile.obito.home.ui.fragment.HomeFragment;
 
 import butterknife.Bind;
@@ -46,7 +47,7 @@ public class MainActivity extends BaseObitoActivity {
     @Override
     protected void initView() {
         //初始化Titlebar
-        initToolBar(toolBar, false, R.string.app_name);
+        initToolBar(toolBar, true, R.string.app_name);
         //ActionBarDrawerToggle配合Toolbar，实现Toolbar上菜单按钮开关效果。
         //ActionBarDrawerToggle是一个开关，用于打开/关闭DrawerLayout抽屉
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolBar, 0, 0);
@@ -72,10 +73,13 @@ public class MainActivity extends BaseObitoActivity {
                 }
                 leftCheckedItem = item;
                 switch (item.getItemId()){
+                    //群英传
                     case R.id.left_menu_heros:
+                        controlShowFragment(1);
                         toolBar.setTitle("群英传");
                         break;
                     default:
+                        controlShowFragment(0);
                         toolBar.setTitle("Obito");
                         break;
                 }
@@ -97,9 +101,11 @@ public class MainActivity extends BaseObitoActivity {
                 rightCheckedItem = item;
                 switch (item.getItemId()){
                     case R.id.right_menu_RxJava:
+                        controlShowFragment(0);
                         toolBar.setTitle("RxJava");
                         break;
                     default:
+                        controlShowFragment(0);
                         toolBar.setTitle("Obito");
                         break;
                 }
@@ -158,7 +164,7 @@ public class MainActivity extends BaseObitoActivity {
         Fragment fragment;
         switch (position){
             case 1:
-                fragment = new HomeFragment();
+                fragment = new HeroesHomeFragment();
                 break;
             default:
                 fragment = new HomeFragment();

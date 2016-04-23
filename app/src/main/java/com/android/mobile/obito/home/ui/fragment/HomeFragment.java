@@ -5,6 +5,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.android.mobile.obito.R;
+import com.android.mobile.obito.androidheroes.systemwidget.ui.activity.SystemWidgetActivity;
+import com.android.mobile.obito.home.control.NavigateControl;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -38,7 +40,7 @@ public class HomeFragment extends BaseObitoFragment{
         super.onClick(v);
         switch (v.getId()){
             case R.id.tv_widget:
-//                NavigateControl.gotoSpecifiedActivity(getContext(), WigetActivity.class);
+                NavigateControl.gotoSpecifiedActivity(getContext(), SystemWidgetActivity.class);
                 break;
         }
     }
